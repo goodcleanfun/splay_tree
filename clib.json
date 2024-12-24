@@ -1,6 +1,6 @@
 {
     "name": "splay_tree",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "repo": "goodcleanfun/splay_tree",
     "description": "Splay tree, adaptive binary search tree with query time proportional to the entropy of access patterns",
     "keywords": [],
