@@ -20,11 +20,6 @@
 #error "Must define SPLAY_TREE_VALUE_TYPE"
 #endif
 
-#ifndef SPLAY_TREE_MAX_HEIGHT
-#define SPLAY_TREE_MAX_HEIGHT 128
-#endif
-
-
 #define SPLAY_CONCAT_(a, b) a ## b
 #define SPLAY_CONCAT(a, b) SPLAY_CONCAT_(a, b)
 #define SPLAY_TREE_TYPED(name) SPLAY_CONCAT(SPLAY_TREE_NAME, _##name)
