@@ -167,7 +167,7 @@ void SPLAY_TREE_FUNC(rotate_right)(SPLAY_TREE_NODE *node) {
 
 
 
-void *SPLAY_TREE_FUNC(search)(SPLAY_TREE_NAME *tree, SPLAY_TREE_KEY_TYPE key) {
+void *SPLAY_TREE_FUNC(get)(SPLAY_TREE_NAME *tree, SPLAY_TREE_KEY_TYPE key) {
     if (tree == NULL || tree->root == NULL) return NULL;
     bool finished = false;
     if (tree->root->value == NULL) {

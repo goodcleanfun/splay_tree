@@ -29,25 +29,25 @@ TEST test_splay_tree(void) {
     splay_tree_uint32_insert(tree, 7, "d");
     splay_tree_uint32_insert(tree, 11, "f");
 
-    char *a = splay_tree_uint32_search(tree, 1);
+    char *a = splay_tree_uint32_get(tree, 1);
     ASSERT_STR_EQ(a, "a");
 
-    char *b = splay_tree_uint32_search(tree, 3);
+    char *b = splay_tree_uint32_get(tree, 3);
     ASSERT_STR_EQ(b, "b");
 
-    char *c = splay_tree_uint32_search(tree, 5);
+    char *c = splay_tree_uint32_get(tree, 5);
     ASSERT_STR_EQ(c, "c");
 
-    char *d = splay_tree_uint32_search(tree, 7);
+    char *d = splay_tree_uint32_get(tree, 7);
     ASSERT_STR_EQ(d, "d");
 
-    char *e = splay_tree_uint32_search(tree, 9);
+    char *e = splay_tree_uint32_get(tree, 9);
     ASSERT_STR_EQ(e, "e");
 
     a = splay_tree_uint32_delete(tree, 1);
     ASSERT_STR_EQ(a, "a");
   
-    a = splay_tree_uint32_search(tree, 1);
+    a = splay_tree_uint32_get(tree, 1);
     ASSERT(a == NULL);
   
     b = splay_tree_uint32_delete(tree, 3);
@@ -56,7 +56,7 @@ TEST test_splay_tree(void) {
     e = splay_tree_uint32_delete(tree, 9);
     ASSERT_STR_EQ(e, "e");
 
-    c = splay_tree_uint32_search(tree, 5);
+    c = splay_tree_uint32_get(tree, 5);
     ASSERT_STR_EQ(c, "c");
 
     c = splay_tree_uint32_delete(tree, 5);
@@ -65,11 +65,11 @@ TEST test_splay_tree(void) {
     d = splay_tree_uint32_delete(tree, 7);
     ASSERT_STR_EQ(d, "d");
 
-    d = splay_tree_uint32_search(tree, 7);
+    d = splay_tree_uint32_get(tree, 7);
     ASSERT(d == NULL);
 
     splay_tree_uint32_insert(tree, 7, "d");
-    d = splay_tree_uint32_search(tree, 7);
+    d = splay_tree_uint32_get(tree, 7);
 
     splay_tree_uint32_destroy(tree);
     PASS();
